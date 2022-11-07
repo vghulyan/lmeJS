@@ -2,11 +2,11 @@
 
 ```
 module.exports = {
-project: {
-ios: {},
-android: {},
-},
-assets: ['./assets/fonts/'],
+    project: {
+        ios: {},
+        android: {},
+    },
+    assets: ['./assets/fonts/'],
 };
 ```
 
@@ -61,18 +61,18 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 const {getDefaultConfig} = require('metro-config');
 
 module.exports = (async () => {
-const {
-resolver: {sourceExts, assetExts},
-} = await getDefaultConfig();
-return {
-transformer: {
-babelTransformerPath: require.resolve('react-native-svg-transformer'),
-},
-resolver: {
-assetExts: assetExts.filter(ext => ext !== 'svg'),
-sourceExts: [...sourceExts, 'svg'],
-},
-};
+    const {
+        resolver: {sourceExts, assetExts},
+    } = await getDefaultConfig();
+    return {
+        transformer: {
+            babelTransformerPath: require.resolve('react-native-svg-transformer'),
+        },
+        resolver: {
+            assetExts: assetExts.filter(ext => ext !== 'svg'),
+            sourceExts: [...sourceExts, 'svg'],
+        },
+    };
 })();
 ```
 
@@ -95,7 +95,7 @@ Evilicons.ttf
 ```
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-super.onCreate(null);
+    super.onCreate(null);
 }
 ```
 
@@ -129,25 +129,15 @@ npm i @react-navigation/bottom-tabs @react-navigation/drawer @react-navigation/n
 
 ## --------------------------------------------
 
-<div>
-<p>
-    <img src="./assets/images/Screenshot 2022-10-31 at 19.51.20.png" width="300" height="500"/>
-</p>
-<p>
-    <img src="./assets/images/Screenshot 2022-10-31 at 19.53.42.png" width="300" height="500"/>
-</p>
-
-</div>
-
-## --------------------------------------------
-
 # App Screenshots
 
-![Gaming App UI](./screenshots/gaming-app-ui-with-tabbar.png)
-![Custom Drawer](./screenshots/custom-drawer-iphone.png)
+![Gaming App UI](./screenshots/Start_screen.png)
 
-![Login UI](./screenshots/login-iphone.png)
-![Register UI](./screenshots/register-iphone.png)
+![Custom Drawer](./screenshots/Login_screen.png)
+![Custom Drawer](./screenshots/Register_screen.png)
+
+![Login UI](./screenshots/Dashboard_screen.png)
+![Register UI](./screenshots/Custom_Drawer_screen.png)
 
 ## --------------------------------------------
 
